@@ -1,0 +1,87 @@
+FROM ubuntu:18.04 as builder
+LABEL "MAINTAINER" = "Dave Wentzel"
+LABEL "email" =  "dave@davewentzel.com"
+
+# Install packages
+
+ENV DEBIAN_FRONTEND noninteractive
+ENV HOME=/scripts \
+    INSTALLERS=/scripts/installers \
+    TERM=xterm
+WORKDIR $HOME
+
+#RUN sed -i "s/# deb-src/deb-src/g" /etc/apt/sources.list
+RUN apt-get -y update
+#RUN apt-get -yy upgrade
+#ENV BUILD_DEPS="git autoconf pkg-config libssl-dev libpam0g-dev \
+#    libx11-dev libxfixes-dev libxrandr-dev nasm xsltproc flex \
+#    bison libxml2-dev dpkg-dev libcap-dev"
+RUN apt-get -yy install sudo apt-utils software-properties-common
+
+RUN apt update && apt -y full-upgrade && apt install -y \
+  ca-certificates \
+  crudini \
+  less \
+  locales \
+  openssh-server \
+  pepperflashplugin-nonfree \
+  pulseaudio \
+  sudo \
+  supervisor \
+  uuid-runtime \
+  vim \
+  wget \
+  xauth \
+  xautolock \
+  xfce4 \
+  xfce4-clipman-plugin \
+  xfce4-cpugraph-plugin \
+  xfce4-netload-plugin \
+  xfce4-screenshooter \
+  xfce4-taskmanager \
+  xfce4-terminal \
+  xfce4-xkb-plugin \
+  xorgxrdp \
+  xprintidle \
+  xrdp \
+  && \
+  rm -rf /var/cache/apt /var/lib/apt/lists 
+#COPY --from=builder /tmp/so/module-xrdp-source.so /var/lib/xrdp-pulseaudio-installer
+#COPY --from=builder /tmp/so/module-xrdp-sink.so /var/lib/xrdp-pulseaudio-installer
+#ADD bin /usr/bin
+#ADD etc /etc
+#ADD autostart /etc/xdg/autostart
+#ADD pulse /usr/lib/pulse-10.0/modules/
+
+# get ssh working
+RUN mkdir /var/run/sshd
+
+# run installers
+# Add all installer scripts for further steps
+ADD ./installers/ $INSTALLERS/
+RUN find $INSTALLERS -name '*.sh' -exec chmod a+x {} +
+RUN $INSTALLERS/user.sh
+RUN $INSTALLERS/xfce-configure.sh
+RUN $INSTALLERS/chromium.sh
+RUN $INSTALLERS/tools.sh
+RUN $INSTALLERS/blockchain.sh
+
+# this is needed for guacamole to be able to connect
+RUN sed -i 's/security_layer=tls/security_layer=rdp/' /etc/xrdp/xrdp.ini
+
+
+
+# if you want to mount a local filesystm, do it here
+#VOLUME ["/mnt/c/git/something","/path-in-container"]
+EXPOSE 3389 22 9001
+
+
+
+
+# supervision
+ENTRYPOINT ["/scripts/installers/entrypoint.sh"]
+RUN cp $INSTALLERS/supervisor.conf /etc/supervisor/conf.d/xrdp.conf
+RUN cp $INSTALLERS/supervisord.conf /etc/supervisor/supervisord.conf
+CMD ["supervisord","-n"]
+#CMD ["/usr/sbin/sshd", "-D"]
+RUN $INSTALLERS/xfce_startup.sh
