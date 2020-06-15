@@ -36,5 +36,5 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 sudo apt update
 sudo apt install code
 
-code --install-extension ms-python.python
-code --install-extension azblockchain.azure-blockchain
+#code --install-extension ms-python.python
+#code --install-extension azblockchain.azure-blockchain

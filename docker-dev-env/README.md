@@ -3,22 +3,11 @@ This is a docker container that will allow you to run the workshop fully from th
 
 You must install docker or Docker Desktop on your machine.  Then follow the instructions below.  The instructions are written in `bash` so you may need to translate them to PoSh/Windows or Macintosh.  (WSL works perfectly.)
 
-Disclaimer:  This is not a foolproof process.  You may need to change some of the commands since software installation processes change over time.  
+Disclaimer:  This is not a perfect process.  You may need to change some of the commands since software installation processes change over time.  
 
-## One step container instructions
+## One command easy instructions
 
-You can either download the container in one command or build the container manually using the steps in the next section.  
-
-```bash
-docker run --name bcdev \
-    -d \
-    -p 2022:22 \
-    -p 3390:3389 \
-    --privileged \
-    hacks/bc-dev
-```
-
-Go to "Connecting to the container ..." to finish the installation.  
+TODO:  container is huge, need to shrink it down so docker hub will accept it.  For now, use the full instructions in the next section.  
 
 ## Full instructions if you want to customize the container
 
@@ -34,7 +23,7 @@ docker run --name bcdev \
     -p 2022:22 \
     -p 3390:3389 \
     --privileged \
-    dwentzel/bc-devenv
+    hacks/bc-dev
 
 #docker ps
 
