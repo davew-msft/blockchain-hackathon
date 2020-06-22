@@ -27,8 +27,8 @@ We hope at the end of the day you'll learn the following:
 ## Agenda TODO
 
 * [Presentation:  "What is blockchain"](./01-what-is-blockchain.pptx)
-* [Ideation]
 * [Presentation:  "What is Azure Blockchain"](./02-azure-blockchain.pptx)
+* [Ideation Workshop](./03-Blockchain-Ideation.pptx)
 * [Setup Your Hacking Environment](EnvironmentSetup.md)
   * Hopefully the setup is done by now
 * [Hack:  Creating Smart Contracts](SmartContracts.md)
