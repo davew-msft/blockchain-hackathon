@@ -37,6 +37,8 @@ You will still need to follow the software verification steps below.
 If you have issues with the installations, let us know.  Python is particularly finnicky. 
 
 * vscode
+  * consider setting the default shell in vscode to `git bash` or `wsl`.  CTL+Shft+P then `terminal: seelect default shell`
+* an ssh client should be available.  Putty is a good choice, or WSL, or `git bash`
 * [Node.js 10.15.x or higher](https://nodejs.org/en/) 
   * to check for node: `node --version`
   * this is needed for npm later

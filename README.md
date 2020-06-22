@@ -15,9 +15,10 @@ This is a full day session geared to both business leaders and technologists.  W
 We hope at the end of the day you'll learn the following:
 
 * Understand the basics of blockchain (the technology is changing so fast that few people are experts)
-* Understand good and bad use cases for blockchain
+* Understand good and bad use cases for blockchain by ideating as small team over some problems you may be facing today.  
+* build a devenv for Smart Contract development 
 * Understand the technologies underlying the Azure Blockchain portfolio
-* Build a little blockchain app using common patterns.  
+* Build a little blockchain app, using common patterns, that attempts to solve the problems you ideated over.  
 
 ## **Getting Your Environment Setup**
 
@@ -26,9 +27,10 @@ We hope at the end of the day you'll learn the following:
 ## Agenda TODO
 
 * [Presentation:  "What is blockchain"](./01-what-is-blockchain.pptx)
+* [Ideation]
 * [Presentation:  "What is Azure Blockchain"](./02-azure-blockchain.pptx)
 * [Setup Your Hacking Environment](EnvironmentSetup.md)
-  * This should've been completed already
+  * Hopefully the setup is done by now
 * [Hack:  Creating Smart Contracts](SmartContracts.md)
 
 
@@ -40,6 +42,7 @@ We hope at the end of the day you'll learn the following:
   * https://aka.ms/BTdevexp
   * https://aka.ms/btinbound
   * https://aka.ms/btoutbound
+* [Azure Blockchain blog](https://azure.microsoft.com/en-us/blog/topics/blockchain/)
 * [Azure Blockchain samples](https://aka.ms/bcsampleapps)
 * [Logic Apps Integration](https://aka.ms/bclogicappshome)
 * [DevOps for Blockchain](https://aka.ms/bcdevops)
