@@ -8,9 +8,9 @@ This is a full day session geared to both business leaders and technologists.  W
 
 **This is a hands-on hackathon.  You will need a computer with the ability to install software (linux, mac, windows is acceptable).  You do not need to have previous blockchain or coding experience.  You will also need access to an Azure subscription to spin up the blockchain solution.**
 
-(If you would like a general introduction to blockchain please see [my Blockchain wiki](./wiki/README.md) which contains my learning notes).  
+(If you would like a general introduction to blockchain please see [our Blockchain wiki](./wiki/README.md) which contains our notes).  You can refer to this if you questions about some of the topics during the hackathon.  
 
-## What is this Hackathon all about?
+## Hackathon Objectives
 
 We hope at the end of the day you'll learn the following:
 
@@ -32,10 +32,17 @@ We hope at the end of the day you'll learn the following:
 * [Setup Your Hacking Environment](EnvironmentSetup.md)
   * Hopefully the setup is done by now
 * [Hack:  Creating Smart Contracts](SmartContracts.md)
-
+* Optional Hacks
+  * These are optional hacks you can do to have a deeper understanding of some of the core concepts we discussed today.  
+  * [Optional Hack 01: Send Transactions to the Bitcoin Network](bitcoin-test.md)
+    * This "challenge" is optional.  We learn how to send transactions to the bitcoin network.
+    * The bitcoin network is very different from Ethereum or other blockchains, specifically in how UTXOs are handled.  The lab is meant to help you understand the differences in implementation.  
+  * [Optional Hack 02: Building a Private Blockchain with Docker and Ethereum](PrivateBlockchain.md)
+    * Building a private blockchain from scratch is a great way for a developer to understand more deeply the inner workings of some of these core concepts.  
 
 ## Resources
 
+* [Our Blockchain Wiki](./wiki/README.md)
 * [Azure Blockchain documentation](https://aka.ms/absdocs)
 * BlockTalk episodes for developers
   * https://aka.ms/BTdeploybc

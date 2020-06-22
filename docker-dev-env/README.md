@@ -5,14 +5,22 @@ You must install docker or Docker Desktop on your machine.  Then follow the inst
 
 Disclaimer:  This is not a perfect process.  You may need to change some of the commands since software installation processes change over time.  
 
-## One command easy instructions
+## Get the container running locally
 
-TODO:  container is huge, need to shrink it down so docker hub will accept it.  For now, use the full instructions in the next section.  
+There are 2 ways to get the devenv container:
 
-## Full instructions if you want to customize the container
+* One command easy instructions (having issues with this method, do not use, see git history)
+* Build the container from the docker instructions.  
+
+Pick a method and continue
+
+## Method 1: One command easy instructions
+
+Not working with xfce4 on all monitor resolutions, use the next method.  Sorry.  
+
+## Build the container from the Dockerfile
 
 ```bash
-
 cd docker-dev-env
 
 # this will take awhile.  
@@ -27,10 +35,6 @@ docker run --name bcdev \
 
 #docker ps
 
-# now connect with your rdp client
-# 127.0.0.1:3390
-# login is vscode/vscode
-
 # to connect to ssh, if needed
 #docker exec -it bcdev /bin/bash
 
@@ -38,12 +42,6 @@ docker run --name bcdev \
 #docker stop bcdev
 #docker rm bcdev
 #docker image rm hacks/bc-dev
-
-# push this image to docker hub
-# docker login
-#docker tag hacks/bc-dev dwentzel/bc-devenv:v1
-#docker push dwentzel/bc-devenv:v1
-
 ```
 
 ## Connecting to the container ...
@@ -52,7 +50,9 @@ You can now connect with your rdp client to:
 
 `127.0.0.1:3390`
 
-login is vscode/vscode
+login is vscode/vscode  
+
+Start vscode.  It may ask to update, please do that.  
 
 You will need to run this manually from the terminal:
 
@@ -63,4 +63,9 @@ code --install-extension azblockchain.azure-blockchain
 
 **Please note, the first time you sign in to Azure on the container Chrome will crash with an `aw snap` message.  Just restart vscode and login again and you will be fine.**
 
-Please return to [EnvironmentSetup](EnvironmentSetup.md) and run all of the verification steps.  
+Please return to [EnvironmentSetup](../EnvironmentSetup.md) and run all of the verification steps.  
+
+
+## Pushing the image to docker hub
+
+This is not needed but see `git history` if it is needed one day.  
