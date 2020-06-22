@@ -1,8 +1,16 @@
 # Dapp = Distributed App
 
+To implement good use cases for blockchain, we create applications that work on top of blockchains. In general, applications that interact with blockchains are referred to as “decentralized applications” or, in short, just DApps or dApps.
+
+These applications do not rely on a centralized database but on a blockchain-based decentralized data store. There is no single point of failure or control for these applications.
+
+Generally, we are used to concepts like objects, classes, functions, etc. when we develop conventional software applications. However, when it comes to blockchain applications, we need to understand a few more concepts like transactions,accounts and addresses, tokens and wallets, inputs, and outputs and balances.
+
 Building a dapp isn’t that much more difficult than building a regular app. The added complexity comes from having to think in a decentralized way and not having as many mature libraries at your disposal as a regular app developer does.
 
 You don’t want to have to deal with the pain and annoyance of bootstrapping a blockchain just so you can have your own appcoin. It’s not worth it when the Bitcoin blockchain already exists. 
+
+New DAPPs are popping up every day. You can explore and discover new ones built on Ethereum by going to https://dappradar.com. DappRadar updates a list of all the latest Ethereum Dapps and gives you a preview of what they do
 
 ## Javascript vs Go
 

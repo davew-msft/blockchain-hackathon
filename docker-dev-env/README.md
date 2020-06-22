@@ -5,14 +5,31 @@ You must install docker or Docker Desktop on your machine.  Then follow the inst
 
 Disclaimer:  This is not a perfect process.  You may need to change some of the commands since software installation processes change over time.  
 
-## One command easy instructions
+## Get the container running locally
 
-TODO:  container is huge, need to shrink it down so docker hub will accept it.  For now, use the full instructions in the next section.  
+There are 2 ways to get the devenv container:
 
-## Full instructions if you want to customize the container
+* One command easy instructions
+* Build the container from the docker instructions.  
+
+Pick a method and continue
+
+## Method 1: One command easy instructions
 
 ```bash
+docker run --name bcdevenv \
+    -d \
+    -p 2022:22 \
+    -p 3390:3389 \
+    --privileged \
+    dwentzel/bc-devenv:v1
+```
 
+Go to `Connecting to the Container`...
+
+## Build the container from the Dockerfile
+
+```bash
 cd docker-dev-env
 
 # this will take awhile.  
@@ -39,10 +56,7 @@ docker run --name bcdev \
 #docker rm bcdev
 #docker image rm hacks/bc-dev
 
-# push this image to docker hub
-# docker login
-#docker tag hacks/bc-dev dwentzel/bc-devenv:v1
-#docker push dwentzel/bc-devenv:v1
+
 
 ```
 
@@ -64,3 +78,16 @@ code --install-extension azblockchain.azure-blockchain
 **Please note, the first time you sign in to Azure on the container Chrome will crash with an `aw snap` message.  Just restart vscode and login again and you will be fine.**
 
 Please return to [EnvironmentSetup](EnvironmentSetup.md) and run all of the verification steps.  
+
+
+## Pushing the image to docker hub
+
+**These instructions are only needed if the base image version gets updated.  You can skip these steps.**
+
+```bash
+# push this image to docker hub
+docker login
+docker tag hacks/bc-dev dwentzel/bc-devenv:v1
+docker push dwentzel/bc-devenv:v1
+
+```
