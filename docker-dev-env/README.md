@@ -50,7 +50,9 @@ You can now connect with your rdp client to:
 
 `127.0.0.1:3390`
 
-login is vscode/vscode
+login is vscode/vscode  
+
+Start vscode.  It may ask to update, please do that.  
 
 You will need to run this manually from the terminal:
 
@@ -61,17 +63,9 @@ code --install-extension azblockchain.azure-blockchain
 
 **Please note, the first time you sign in to Azure on the container Chrome will crash with an `aw snap` message.  Just restart vscode and login again and you will be fine.**
 
-Please return to [EnvironmentSetup](EnvironmentSetup.md) and run all of the verification steps.  
+Please return to [EnvironmentSetup](../EnvironmentSetup.md) and run all of the verification steps.  
 
 
 ## Pushing the image to docker hub
 
-**These instructions are only needed if the base image version gets updated.  You can skip these steps.**
-
-```bash
-# push this image to docker hub
-docker login
-docker tag hacks/bc-dev dwentzel/bc-devenv:v1
-docker push dwentzel/bc-devenv:v1
-
-```
+This is not needed but see `git history` if it is needed one day.  

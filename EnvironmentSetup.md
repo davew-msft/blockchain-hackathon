@@ -38,21 +38,28 @@ Once you have a development environment created, please go to the next step.
 Let's make sure everything is working:
 
 ```bash
-
-
+git --version
+node --version
+truffle version
+ganache-cli version #ctl+c to kill it
 ```
 
+* Restart vscode
+* Ctl+Shift+P then `Blockchain: Show Welcome Page`
+  * It may take a few seconds to display, it is checking your software dependencies.  
+  * **At this point you may see errors about required software missing.  We need to resolve those issues NOW**.  If you just see the Welcome screen then you are ready to go.  
 
   
 ## Connect vscode to Azure Blockchain Service
 
-**Perform these steps from your local environment or from the devenv container.**
 
 * In the vscode explorer pane, expand the `Blockchain Networks` option
 
 ![](./img/vscodeexp.png)
 
 * Choose `Connect to Network`, and `Azure Blockchain` and connect to your consortium
+
+If you are using the devenv container it's likely chrome will crash when you first login to Azure.  This is a problem with my container.  Just restart chrome and restart vscode again and it should work.  
 
 
 **You did it, everything is working!**

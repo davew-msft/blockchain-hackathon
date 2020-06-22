@@ -42,10 +42,7 @@ If you have issues with the installations, let us know.  Python is particularly 
   * choose `Python 2.7.15`
   * Your lower left statusbar should look like this:
   ![](./img/vscodepy.png)
-  * Ctl+Shift-P to open the command palette again
-  * `Blockchain: Show Welcome Page`
-  * It may take a few seconds to display, it is checking your software dependencies.  
-  * **At this point you may see errors about required software missing.  We need to resolve those issues NOW**
+ 
 
 ### Most Common Problem:  Resolving python 2.7 Issues
 
