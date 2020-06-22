@@ -9,23 +9,14 @@ Disclaimer:  This is not a perfect process.  You may need to change some of the 
 
 There are 2 ways to get the devenv container:
 
-* One command easy instructions
+* One command easy instructions (having issues with this method, do not use, see git history)
 * Build the container from the docker instructions.  
 
 Pick a method and continue
 
 ## Method 1: One command easy instructions
 
-```bash
-docker run --name bcdevenv \
-    -d \
-    -p 2022:22 \
-    -p 3390:3389 \
-    --privileged \
-    dwentzel/bc-devenv:v1
-```
-
-Go to `Connecting to the Container`...
+Not working with xfce4 on all monitor resolutions, use the next method.  Sorry.  
 
 ## Build the container from the Dockerfile
 
@@ -44,10 +35,6 @@ docker run --name bcdev \
 
 #docker ps
 
-# now connect with your rdp client
-# 127.0.0.1:3390
-# login is vscode/vscode
-
 # to connect to ssh, if needed
 #docker exec -it bcdev /bin/bash
 
@@ -55,9 +42,6 @@ docker run --name bcdev \
 #docker stop bcdev
 #docker rm bcdev
 #docker image rm hacks/bc-dev
-
-
-
 ```
 
 ## Connecting to the container ...
