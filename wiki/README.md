@@ -25,4 +25,5 @@ Most up-and-running blockchain applications revolve around moving money or other
 * [Other blockchain implementations](others.md)
 * [trends](trends.md)
 * [dapps Programming Basics](dapps.md)
+* [Building a Consortium](consortiums.md)
 

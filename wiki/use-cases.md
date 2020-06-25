@@ -38,6 +38,13 @@ Contract concepts:
   * Tattoo and piercing shops that want to prove their work and get real feedback from customers. 
 * Shareholder meetings
   * these tend to be poorly documented.  You can put the text on a public blockchain with any supporting information stored off-chain
+* mandated supplier diversity
+  * Most enterprises have goals and are sometimes mandated by law to ensure supplier diversity
+  * %age of spend on women-owned, minority owned, regional, and many other diversity criteria
+  * Goals and regulations vary widely by region
+  * Suppliers change status regularly – they may not be a minority supplier after 2 years into the relationship
+  * Auditing and certification are key requirements
+  * Certification agencies are many, and change by region
 * music royalties
   * Musicians rarely get their royalties.  
   * It's also difficult for streaming services to know where to send the royalties.  A blockchain can help to automate much of this.  
