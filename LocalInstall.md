@@ -2,7 +2,11 @@
 
 If you have issues with the installations, let us know.  Python is particularly finnicky. 
 
+**All tools must install cleanly.  If there are any errors please ask us for help or consider searching google/bing.  Blockchain tooling is bleeding edge and we've found the tools installations to be a bit frustrating to get going the first time.**
+
 * vscode
+* build tools (if running windows)
+  * `npm install --global --production windows-build-tools`
 * [Node.js 10.15.x or higher](https://nodejs.org/en/) 
   * to check for node: `node --version`
   * this is needed for npm later
@@ -11,19 +15,17 @@ If you have issues with the installations, let us know.  Python is particularly 
 * [python 2.7.15](https://www.python.org/downloads/release/python-2715/)
   * **Please note:  you MUST have python 2.7.15.  I know this is old but it is REQUIRED for some of the OSS tooling.  Python3 won't work.  Not my fault**.  This requirement may change any day.  
 
->> Verification Steps: Ensure py27 is working with vscode: 
->> * Open vscode 
->> * Ctl + Shift + P
->> * begin typing `Python: select interpreter`
->> * Ensure 2.7.15 is available.  If it isn't, you need to install it.  
+>> Verification Steps: Ensure py27 is working _as the default python version_: 
+>> * Open a cmd prompt 
+>> * `python --version` should return 2.7.15
+>> * If it doesn't then you may have to adjust your path to ensure it is the FIRST python listed on your path. Then relaunch your cmd prompt and try again.  If you need python 2.7 then continue:  
 
 * Install python on windows
     * download 32bit from the link above
     * note the install location.  You'll need it:
     * ![](./img/py27.png) 
-    * Choose these options.  Note that `Register Extensions` and `Add python to path` are DISABLED ![](./img/pyOptions.png).  
-    * We do this because python 2.7 is very old and unsupported.  We don't want to ruin your existing python environment.  
-    * Now follow the Verification Steps above.  
+    * Note that `Register Extensions` and `Add python to path` are ENABLED 
+
 * [Truffle 5.0.0](https://www.trufflesuite.com/docs/truffle/getting-started/installation)
   * to verify:  `npm install -g truffle`
   * Truffle provides the building blocks to create, compile, deploy, and test blockchain applications.
@@ -60,3 +62,5 @@ As long as it does, you can continue.
 ## Verification Steps
 
 Please go to [EnvironmentSetup](EnvironmentSetup.md) to verify everything is working correctly and continue with the next steps.  
+
+
