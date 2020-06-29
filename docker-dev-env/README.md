@@ -52,16 +52,36 @@ You can now connect with your rdp client to:
 
 login is vscode/vscode  
 
-Start vscode.  It may ask to update, please do that.  
-
 You will need to run this manually from the terminal:
 
 ```
-code --install-extension ms-python.python
+curl -sL https://deb.nodesource.com/setup_10.x | sudo bash
+sudo apt-get install -y nodejs
+
+sudo chmod -R 0777 /usr/lib/node_modules 
+#sudo chmod -R 0777 /usr/bin
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+touch ~/.profile
+echo "" >> ~/.profile
+echo "export PATH=~/.npm-global/bin:$PATH" >> ~/.profile
+echo "" >> ~/.profile
+source ~/.profile
+NPM_CONFIG_PREFIX=~/.npm-global
+
+npm install -g node-gyp 
+npm install -g scrypt
+npm install -g truffle
+npm install -g ganache-cli
+
 code --install-extension azblockchain.azure-blockchain
+
 ```
 
-**Please note, the first time you sign in to Azure on the container Chrome will crash with an `aw snap` message.  Just restart vscode and login again and you will be fine.**
+* Start vscode.  It may ask to update, please do that.  
+* Sign in to Azure with chrome.  
+
+**Please note, the first time you sign in to Azure on the container Chrome will crash with an `aw snap` message.  Just restart vscode and chrome and login again and you will be fine.**
 
 Please return to [EnvironmentSetup](../EnvironmentSetup.md) and run all of the verification steps.  
 
