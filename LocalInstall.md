@@ -60,3 +60,7 @@ As long as it does, you can continue.
 ## Verification Steps
 
 Please go to [EnvironmentSetup](EnvironmentSetup.md) to verify everything is working correctly and continue with the next steps.  
+
+
+
+elevated: npm install --global windows-build-tools

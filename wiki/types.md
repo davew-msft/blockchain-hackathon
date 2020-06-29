@@ -36,4 +36,42 @@ One such example sidechain is the Lightning Network for Bitcoins that should hel
 
 For Bitcoin, the Lightning Network was designed for off-chain computation and to make the payments transaction faster. Similarly, the Raiden Network was designed for Ethereum blockchain. 
 
+## Hyperledger
 
+Hyperledger is a foundation that supports a community of software developers and technology enthusiasts who are building industry standards for blockchain frameworks and platforms. Hyperledger’s work is crucial because they’re creating blockchain technology that fit the needs of businesses. Cryptocurrencies on public blockchains have regulatory implications and liabilities that prevent many companies from utilizing these networks. Hyperledger has many of the same benefits of public blockchain technology but operates without a cryptocurrency. With big supporters such as Intel and IBM, Hyperledger is the trusted deployment platform for enterprise teams.
+
+* does not have an attached currency, but you can create a coin if needed.  
+* was created with the goal of being an OSS blockchain platform targeted for enterprises.  
+* has pluggable modules so you can create your own unique platform.  
+* ancillary goals to improve the performance and reliability of blockchain without the cost.  
+
+>>Hyperledger uses the term `DLT` a lot.  Distributed Ledger Technology.  This is synonymous with blockchain.  
+
+On Hyperledger, smart contracts are called `chaincode`.
+
+Chaincode can be written in Go, node.js, or Java and runs in a secured Docker container.  Unlike other smart contract platforms that must expose your contract to a public network to enforce the contract, chaincode is isolated from the endorsing peer process of public blockchains. This allows you to keep your business logic private. This feature may reduce attack vectors on your contracts by keeping third parties from accessing them.
+
+[Optional Hack:  Code a Smart Contract with Hyperledger Composer](../03-hyperledger-composer.md))
+
+
+## Quorum
+
+Quorum is the Enterprise-focused version of Ethereum. Quorum addresses specific challenges to Blockchain technology adoption within
+the financial industry and beyond. Quorum has developed capabilities to address requirements of many industries and verticals.
+
+## Ripple 
+
+Ripple claims it’s "the world’s only enterprise Blockchain solution for global payments."  Unlike many other cryptocurrencies, Ripple is
+centralized, and it comes with a finite supply of currencies. Also, it claims to be the most scalable Blockchain solution on the market.
+
+## R3 Corda
+
+R3 (R3CEV LLC) is a distributed database technology company that leads a consortium of more than 200 of the world’s biggest banks and financial institutions in research and development of Blockchain database usage in the financial system.
+
+Corda is the perfect answer to a GDPR-compliant blockchain.  
+
+Corda does not come with blocks and it is not a Blockchain; yet it retains all the promises of a private permissioned Blockchain network, such as: 
+* Immutability
+* Traceability
+* Replication
+* Single source of truth for all involved parties

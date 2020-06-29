@@ -22,6 +22,8 @@ Contract concepts:
 
 ## Business Use Cases - Food for Thought
 
+* GiveTrack
+  * holds charities accountable for how they use their donations by tracking the flow of funds.  
 * Diamond chains
   * Reduce ins fraud
   * Needs to be distributed for political reasons

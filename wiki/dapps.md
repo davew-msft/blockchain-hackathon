@@ -10,7 +10,9 @@ Building a dapp isn’t that much more difficult than building a regular app. Th
 
 You don’t want to have to deal with the pain and annoyance of bootstrapping a blockchain just so you can have your own appcoin. It’s not worth it when the Bitcoin blockchain already exists. 
 
-New DAPPs are popping up every day. You can explore and discover new ones built on Ethereum by going to https://dappradar.com. DappRadar updates a list of all the latest Ethereum Dapps and gives you a preview of what they do
+New DAPPs are popping up every day. You can explore and discover new ones built on Ethereum by going to https://dappradar.com. DappRadar updates a list of all the latest Ethereum Dapps and gives you a preview of what they do.
+
+The crypto space is an ever-growing uncharted territory. There’s no definitive stack of tools, like LAMP or MEAN in web development, to build decentralized apps.  
 
 ## Javascript vs Go
 
