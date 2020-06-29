@@ -24,11 +24,12 @@ We hope at the end of the day you'll learn the following:
 
 **Please follow the instructions on [EnvironmentSetup.md](EnvironmentSetup.md).  You may want to start doing this immediately.  Installing software can take valuable time away from hacking.**
 
-## Agenda TODO
+## Agenda
 
 * [Presentation:  "What is blockchain"](./01-what-is-blockchain.pptx)
 * [Presentation:  "What is Azure Blockchain"](./02-azure-blockchain.pptx)
-* [Ideation Workshop](./03-Blockchain-Ideation.pptx)
+* [Presentation:  "Solidity Smart Contracts"](./03-SolidityContracts.pptx)
+* [Ideation Workshop](./04-Blockchain-Ideation.pptx)
 * [Setup Your Hacking Environment](EnvironmentSetup.md)
   * Hopefully the setup is done by now, if not you need to complete the devenv setup before continuing.
 * [Hack:  Creating Smart Contracts](./labs/SmartContractIdeation/SmartContracts.md)
