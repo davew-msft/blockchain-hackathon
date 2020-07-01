@@ -32,10 +32,15 @@ We hope at the end of the day you'll learn the following:
 * [Ideation Workshop](./04-Blockchain-Ideation.pptx)
 * [Setup Your Hacking Environment](EnvironmentSetup.md)
   * Hopefully the setup is done by now, if not you need to complete the devenv setup before continuing.
-* [Hack:  Creating Smart Contracts](./labs/SmartContractIdeation/SmartContracts.md)
-  * In this hack we will build a smart contract solution using Azure Blockchain and supporting services that meets the business requirements you determined during the Ideation phase of this workshop.  
+* [Hack01:  Creating Smart Contracts](./labs/SmartContractIdeation/SmartContracts.md)
+  * In this hack we will build a smart contract solution using Azure Blockchain and supporting services  
   * If you get stuck or need assistance, let us know.  
   * If you want some practice before diving in and building a smart contract from scratch, consider the Optional Hacks.  
+* [Hack02: Build a Smart Contract using a Defined Use Case](./labs/SmartContractIdeation/02-SmartContractsDefinedUseCase.md)
+  * In this hack we'll give you a defined use case so you can continue learning about the components of Smart Contracts.  
+* [Hack03: Solve Our Ideation Use Case with a Custom Smart Contract](./labs/SmartContractIdeation/03-SmartContractsIdeation.md)
+  * Now we'll actually hack and try to solve our business use case.  
+* [Hack04: Add value to your Smart Contract using Power Platform](./labs/SmartContractIdeation/04-PowerPlatform.md)
 
 ## Optional Hacks
 These are optional hacks you can do to get a deeper understanding of some of the core concepts we discussed today. If you are getting overwhelmed designing your Smart Contract from scratch, try some of these challenges first.  
