@@ -40,7 +40,9 @@ We hope at the end of the day you'll learn the following:
   * In this hack we'll give you a defined use case so you can continue learning about the components of Smart Contracts.  
 * [Hack03: Solve Our Ideation Use Case with a Custom Smart Contract](./labs/SmartContractIdeation/03-SmartContractsIdeation.md)
   * Now we'll actually hack and try to solve our business use case.  
-* [Hack04: Add value to your Smart Contract using Power Platform](./labs/SmartContractIdeation/04-PowerPlatform.md)
+* [Hack04: Add value to your Smart Contract using Flow](./labs/SmartContractIdeation/04-Flow.md)
+  * A Smart Contract is great but we usually want to integrate the Smart Contract into an existing application or workflow.  The easiest way to do this is by building a Flow, which is a serverless, no-code solution.  In this lab we'll look at how easy it is to add our Smart Contract to a Flow.  
+  * We could do something similarly with an Azure Logic App.  
 
 ## Optional Hacks
 These are optional hacks you can do to get a deeper understanding of some of the core concepts we discussed today. If you are getting overwhelmed designing your Smart Contract from scratch, try some of these challenges first.  
