@@ -47,8 +47,6 @@ We hope at the end of the day you'll learn the following:
 ## Optional Hacks
 These are optional hacks you can do to get a deeper understanding of some of the core concepts we discussed today. If you are getting overwhelmed designing your Smart Contract from scratch, try some of these challenges first.  
 
-* [Optional Hack 00: Hello Blockchain](./labs/00-hello-blockchain/README.md) 
-  * This is a "Hello World" application for Azure blockchain.  It doesn't get more basic than this.  
 * [Optional Hack 01: Send Transactions to the Bitcoin Network](bitcoin-test.md)
   * This "challenge" is optional.  We learn how to send transactions to the bitcoin network.
   * The bitcoin network is very different from Ethereum or other blockchains, specifically in how UTXOs are handled.  The lab is meant to help you understand the differences in implementation.  

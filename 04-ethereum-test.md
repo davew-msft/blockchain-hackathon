@@ -1,4 +1,4 @@
-TODO, not complete
+TODO, not yet complete.  
 
 
 In this section we will learn how to

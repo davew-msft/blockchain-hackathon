@@ -1,7 +1,8 @@
 
 ## Send a test transaction to the Bitcoin test network
 
-TODO
+This hack is still wip.
+
 
 This is a "hello world" example to program a bitcoin dapp.  We use the test network b/c it's free but we could easily spin up a single node container using Docker.  
 

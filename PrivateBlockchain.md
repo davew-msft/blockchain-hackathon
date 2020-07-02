@@ -1,14 +1,14 @@
 # Building a Private Blockchain with Docker and Ethereum
-TODO
 
-*This is an optional exercise.*
+
+*This is an optional exercise.  This lab is also wip.*
 
 Private blockchains are great for developers because they allow them to test ideas without using cryptocurrency. The developer ideas can remain a secret as well, because the data has not been published publicly.
 
 
 ## Setup
 
-* Ensure you have already setup your environment using the instructions found at TODO
+* Ensure you have already setup your environment using the instructions already provided.  
 * Install Docker Desktop
 https://github.com/Capgemini-AIE/ethereum-docker
 
