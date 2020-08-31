@@ -1,5 +1,10 @@
 # Blockchain Hackathon
 
+## git branches
+
+* master:  working code
+* xfce-container:  version that uses the xfce container.  
+
 ## Abstract
 
 Companies in every industry are building blockchain applications and asking their business partners to integrate with them.  Are you ready to build a blockchain application when your CEO comes asking?  Blockchain is transforming forward-thinking companies.  Now is the time to understand the technology and build a strategy. 
