@@ -1,0 +1,62 @@
+FROM ubuntu:18.04 as blockchain-builder
+LABEL "MAINTAINER" = "Dave Wentzel"
+LABEL "email" =  "dave@davewentzel.com"
+
+# Install packages
+
+ENV DEBIAN_FRONTEND noninteractive
+ENV HOME=/scripts \
+    INSTALLERS=/scripts/installers \
+    TERM=xterm
+WORKDIR $HOME
+
+#RUN sed -i "s/# deb-src/deb-src/g" /etc/apt/sources.list
+RUN apt-get -y update
+#RUN apt-get -yy upgrade
+#ENV BUILD_DEPS="git autoconf pkg-config libssl-dev libpam0g-dev \
+#    libx11-dev libxfixes-dev libxrandr-dev nasm xsltproc flex \
+#    bison libxml2-dev dpkg-dev libcap-dev"
+RUN apt-get -yy install sudo apt-utils software-properties-common
+
+RUN apt update && apt -y full-upgrade && apt install -y \
+  ca-certificates \
+  crudini \
+  less \
+  locales \
+  openssh-server \
+  sudo \
+  supervisor \
+  uuid-runtime \
+  vim \
+  wget \
+  net-tools \
+  git \
+  curl \ 
+  build-essential \
+  && \
+  rm -rf /var/cache/apt /var/lib/apt/lists 
+
+# get ssh working
+RUN mkdir /var/run/sshd
+
+# run installers
+# Add all installer scripts for further steps
+ADD ./installers/ $INSTALLERS/
+RUN find $INSTALLERS -name '*.sh' -exec chmod a+x {} +
+RUN $INSTALLERS/user.sh
+RUN $INSTALLERS/blockchain.sh
+
+# if you want to mount a local filesystm, do it here
+#VOLUME ["/mnt/c/git/something","/path-in-container"]
+EXPOSE 22
+
+
+
+
+# supervision
+ENTRYPOINT ["/scripts/installers/entrypoint.sh"]
+RUN cp $INSTALLERS/supervisor.conf /etc/supervisor/conf.d/xrdp.conf
+RUN cp $INSTALLERS/supervisord.conf /etc/supervisor/supervisord.conf
+CMD ["supervisord","-n"]
+#CMD ["/usr/sbin/sshd", "-D"]
+RUN $INSTALLERS/xfce_startup.sh

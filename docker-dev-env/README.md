@@ -3,21 +3,6 @@ This is a docker container that will allow you to run the workshop fully from th
 
 You must install docker or Docker Desktop on your machine.  Then follow the instructions below.  The instructions are written in `bash` so you may need to translate them to PoSh/Windows or Macintosh.  (WSL works perfectly.)
 
-Disclaimer:  This is not a perfect process.  You may need to change some of the commands since software installation processes change over time.  
-
-## Get the container running locally
-
-There are 2 ways to get the devenv container:
-
-* One command easy instructions (having issues with this method, do not use, see git history)
-* Build the container from the docker instructions.  
-
-Pick a method and continue
-
-## Method 1: One command easy instructions
-
-Not working with xfce4 on all monitor resolutions, use the next method.  Sorry.  
-
 ## Build the container from the Dockerfile
 
 ```bash

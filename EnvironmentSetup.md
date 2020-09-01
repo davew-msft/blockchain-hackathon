@@ -24,12 +24,15 @@ You will need an Azure Subscription with at least OWNER on one resource group
 
 ## Local Development Environment
 
-There are 2 ways you could set up an Azure Blockchain Development Environment.  
+There are 3 ways you could set up an Azure Blockchain Development Environment.  
 
-1. Use a Docker container for all development.  This requires the least amount of software configuration on your local machine.  It will require you to have Docker Desktop or equiv running on your local machine.  Please see [the devenv container instructions here](./docker-dev-env/README.md).
-2. Install all software locally on your laptop.  [Local software installation instructions](./LocalInstall.md).  
+1. Install all software locally on your laptop.  [Local software installation instructions](./LocalInstall.md).  **Warning: this may be challenging if you are not well-versed in python and nodejs.**
+2. Use vscode running locally using "remote development" against a docker container running the development languages.  Please see [vscode remote development](./remote-dev/RemoteDev.md).  
+3. Use a Docker container for all development.  This requires the least amount of software configuration on your local machine.  It will require you to have Docker Desktop or equiv running on your local machine.  Everything, including vscode, runs in the container and we will using mstsc/rdp to connect to the environment.  Please see [the devenv container instructions here](./docker-dev-env/README.md).
 
 *More information can be found [here](https://docs.microsoft.com/en-us/azure/blockchain/service/connect-vscode) regarding the software needed to build Smart Contracts.* 
+
+**Please choose a method to do remote development above and get your environment ready!**
 
 Once you have a development environment created, please go to the next step.  
 
