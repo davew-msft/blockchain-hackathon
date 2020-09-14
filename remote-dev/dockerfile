@@ -51,12 +51,8 @@ RUN $INSTALLERS/blockchain.sh
 EXPOSE 22
 
 
-
-
 # supervision
 ENTRYPOINT ["/scripts/installers/entrypoint.sh"]
 RUN cp $INSTALLERS/supervisor.conf /etc/supervisor/conf.d/xrdp.conf
 RUN cp $INSTALLERS/supervisord.conf /etc/supervisor/supervisord.conf
 CMD ["supervisord","-n"]
-#CMD ["/usr/sbin/sshd", "-D"]
-RUN $INSTALLERS/xfce_startup.sh

@@ -39,7 +39,7 @@ login is vscode/vscode
 
 You will need to run this manually from the terminal:
 
-```
+```bash
 curl -sL https://deb.nodesource.com/setup_10.x | sudo bash
 sudo apt-get install -y nodejs
 
