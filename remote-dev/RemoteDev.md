@@ -20,16 +20,19 @@ You will need the following:
   * and then connect to:  `http:/localhost:8081`
   * when everything is working you can run the following to stop this container
 
-  ```bash
+```bash
 docker stop docker-test
 docker rm docker-test
-  ```
+```
 
 ## Build the container from the Dockerfile
 
 These instructions assume you are running from bash/WSL.  You can also run them with powershell with some slight modifications
 
 ```bash
+# first, clone this git repo to a directory where you normally do development
+git clone https://github.com/davew-msft/blockchain-hackathon.git  blockchain-hackathon
+cd blockchain-hackathon
 cd remote-dev
 
 # this will take awhile.  

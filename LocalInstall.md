@@ -4,6 +4,12 @@ If you have issues with the installations, let us know.  Python is particularly 
 
 **All tools must install cleanly.  If there are any errors please ask us for help or consider searching google/bing.  Blockchain tooling is bleeding edge and we've found the tools installations to be a bit frustrating to get going the first time.**
 
+```bash
+# clone our hackathon git repo locally
+git clone https://github.com/davew-msft/blockchain-hackathon.git  blockchain-hackathon
+cd blockchain-hackathon
+```
+
 * vscode
 * [Node.js 10.15.x or higher](https://nodejs.org/en/) 
   * to check for node: `node --version`
