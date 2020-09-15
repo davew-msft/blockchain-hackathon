@@ -25,7 +25,16 @@ You will need an Azure Subscription with at least OWNER on one resource group
 
 ## Local Development Environment
 
+Developing smart contracts for a blockchain can be done many different ways.  As of this blockchain hackathon's writing, the tooling generally includes
+* truffle:  this allows you to build the actual smart contract code
+* ganache:  a CLI that allows you to deploy the json output from the `truffle` commands to either a local blockchain that gananche runs for you, or a private (example:  Azure Blockchain) or public (example:  Ethereum) blockchain. 
+
+These 2 software packages require a working knowledge of javascript and nodejs.  Blockchain is built on security and one of the core nodejs security packages actually requires python 2.7 to work properly.  Python 2.7 is out-of-support and does not play nicely with python3x on your laptop.  In fact, if you are a python programmer you may not want to risk polluting your work machine with python 2.7.  
+
 There are 3 ways you could set up an Azure Blockchain Development Environment.  
+* install everything right on your laptop.  You risk having to deal with python weirdness
+* run vscode on your laptop pointing to a docker container for the compute engine so you don't need to deal with python2.7.  This works really well and only one component, the smart contract UI, doesn't work.  Doing "dev ready container development" is probably the future of development, so we prefer this approach.  
+* run everything, from your browser, to vscode, to all of the blockchain tooling, directly in a docker container that you connect to via a RDP session.  It looks to you like you are running everything in a vm.   This has a tendency to behave weirdly.  
 
 
 |Method|Description|Pros|Cons|

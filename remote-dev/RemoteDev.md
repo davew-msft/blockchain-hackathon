@@ -2,6 +2,8 @@
 
 **All tools must install cleanly.  If there are any errors please ask us for help or consider searching google/bing.  Blockchain tooling is bleeding edge and we've found the tools installations to be a bit frustrating to get going the first time.**
 
+Since 
+
 ## Software
 
 You will need the following:  
@@ -11,6 +13,17 @@ You will need the following:
     * Remote-Containers
     * Remote Development
 * Docker Desktop
+  * the exact instructions to install docker desktop on your laptop varies depending on whether you use mac, linux, or windows (and depending on the version of windows too).  
+  * we can help if needed
+  * to test your docker deployment run the following container
+  * `docker run --name docker-test -d -p 8081:80 docker/getting-started`
+  * and then connect to:  `http:/localhost:8081`
+  * when everything is working you can run the following to stop this container
+
+  ```bash
+docker stop docker-test
+docker rm docker-test
+  ```
 
 ## Build the container from the Dockerfile
 

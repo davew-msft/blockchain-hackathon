@@ -22,7 +22,7 @@ We hope at the end of the day you'll learn the following:
 
 ## **Getting Your Environment Setup**
 
-**Please follow the instructions on [EnvironmentSetup.md](EnvironmentSetup.md).  You may want to start doing this immediately.  Installing software can take valuable time away from hacking.**
+**Please follow the instructions on [EnvironmentSetup.md](EnvironmentSetup.md).  You may want to start doing this immediately and multitask while we do the presentations and ideation.  Installing software can take valuable time away from hacking.**
 
 ## Agenda
 
