@@ -42,11 +42,7 @@ cd remote-dev
 # Successfully tagged hacks/bc-dev-remote:latest
 docker build -t hacks/bc-dev-remote .  --label "version=0.2"
 
-docker run --name bcdevremote \
-    -d \
-    -p 2022:22 \
-    --privileged \
-    hacks/bc-dev-remote
+docker run --name bcdevremote -d -p 2022:22 --privileged hacks/bc-dev-remote
 
 # the container should be running now.  You can check with: 
 docker ps

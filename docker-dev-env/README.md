@@ -11,12 +11,7 @@ cd docker-dev-env
 # this will take awhile.  
 docker build -t hacks/bc-dev .  --label "version=0.1"
 
-docker run --name bcdev \
-    -d \
-    -p 2022:22 \
-    -p 3390:3389 \
-    --privileged \
-    hacks/bc-dev
+docker run --name bcdev -d -p 2022:22 -p 3390:3389 --privileged hacks/bc-dev
 
 #docker ps
 
