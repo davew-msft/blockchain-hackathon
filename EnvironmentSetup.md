@@ -31,16 +31,15 @@ Developing smart contracts for a blockchain can be done many different ways.  As
 
 These 2 software packages require a working knowledge of javascript and nodejs.  Blockchain is built on security and one of the core nodejs security packages actually requires python 2.7 to work properly.  Python 2.7 is out-of-support and does not play nicely with python3x on your laptop.  In fact, if you are a python programmer you may not want to risk polluting your work machine with python 2.7.  
 
-There are 3 ways you could set up an Azure Blockchain Development Environment.  
-* install everything right on your laptop.  You risk having to deal with python weirdness
-* run vscode on your laptop pointing to a docker container for the compute engine so you don't need to deal with python2.7.  This works really well and only one component, the smart contract UI, doesn't work.  Doing "dev ready container development" is probably the future of development, so we prefer this approach.  
-* run everything, from your browser, to vscode, to all of the blockchain tooling, directly in a docker container that you connect to via a RDP session.  It looks to you like you are running everything in a vm.   This has a tendency to behave weirdly.  
+## Development with Docker dev ready containers
 
+We are going to use a pre-built dev-ready container with all tooling installed.  Please following these instructions to setup docker, vscode, and the container:  [vscode with ssh development](./remote-dev/RemoteDev.md)
+
+There are 2 alternative ways you could set up an Azure Blockchain Development Environment:  
 
 |Method|Description|Pros|Cons|
 |---------|------|------|------|
 |[Local Software Install](./LocalInstall.md)|Install everything locally on your laptop.|For full time developers that are comfortable with python 2.7|**Warning: this may be challenging if you are not well-versed in python and nodejs.**|
-|[vscode with ssh development](./remote-dev/RemoteDev.md)|We install vscode locally but do all compute in a docker container that has all of the blockchain tooling pre-installed|MUCH EASIER to setup.  **This is the preferred method**||
 |[development on a docker "vm" on your laptop](./docker-dev-env/README.md)|Everything, including vscode, runs in the container and we will using mstsc/rdp to connect to the environment. |||
 
 
