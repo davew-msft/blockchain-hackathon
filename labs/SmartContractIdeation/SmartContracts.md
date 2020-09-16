@@ -27,12 +27,11 @@ Whenever you create a new blockchain project:
   * `mkdir solidity-contract`
 * Ctl+Shft+P:  `Blockchain: New Solidity Contract`
 * `Create basic project`
-* when it asks for the folder choose the folder and path you created above (likely:  `solidity-contract`)
+* when it asks for the folder choose the folder and path you created above (likely:  `/workspaces/blockchain-hackathon/solidity-contract/`)
 * the project will take a few mins to create
->> If you want to see what this is doing just `Ctl+~` (ctl + backtick(above TAB on most kbds)) and select `Output` and `Azure blockchain`. :
+>> If you want to see what this is doing just select `Output` at the bottom of vscode and `Azure blockchain`. :
 
 ![](../../img/vscode6.png)
-  
 
   
 
