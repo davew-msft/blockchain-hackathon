@@ -35,7 +35,7 @@ These 2 software packages require a working knowledge of javascript and nodejs. 
 
 We are going to use a pre-built dev-ready container with all tooling installed.  Please following these instructions to setup docker, vscode, and the container:  
 
-[vscode with ssh development](./remote-dev/RemoteDev.md)
+[vscode remote container development](./remote-dev/RemoteDev.md)
 
 ### Alternative Software Setup Methods
 

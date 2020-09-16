@@ -38,48 +38,10 @@ cd blockchain-hackathon
 1. start vscode
 1. Press <kbd>F1</kbd> and select `Remote-Containers: Reopen Folder in Container`
 
+In the lower left corner you should see that you are now running vscode using the container as the compute engine
 
-# this will take awhile.  
-# you will see a lot of npm WARN messages in red.  They can all be ignored.  
-# just make sure the final command outoput is something like 
-# Successfully built fe70b0187782
-# Successfully tagged hacks/bc-dev-remote:latest
-docker build -t hacks/bc-dev-remote .  --label "version=0.2"
+![](../img/vscode8.png)
 
-docker run --name bcdevremote -d -p 2022:22 --privileged hacks/bc-dev-remote
-
-# the container should be running now.  You can check with: 
-docker ps
-# you should see hacks/bc-dev-remote  under IMAGE column
-```
-
-### Troubleshooting the container, if needed
-
-```bash
-# to connect to ssh, if needed later
-docker exec -it bcdevremote /bin/bash
-
-# to stop, remove the container and remove the image
-docker stop bcdevremote
-docker rm bcdevremote
-docker image rm hacks/bc-dev-remote
-```
-
-
-
-## Using the container with vscode
-
-* Start vscode
-* Ctl + Shift+ P and begin typing: `Remote-Containers: Attach to Running Container`
-![](../img/vscode1.png)
-
-* Connect to the container called `bcdevremote`
-* This will open a new vscode window.  If you look carefully at the lower left of the window you should see that this new vscode window is using the container as the compute engine.  
-![](../img/vscode2.png)
-* Now we need to install a few things in this container:
-  * extension:  blockchain development kit for ethereum
-  * you will need to reload vscode.  click `Reload Required`
-  * this will only close the instance of vscode running in the container.  Relaunch vscode in the container by again: `Remote-Containers: Attach to Running Container`
 * Ctl + Shift+ P :  `Blockchain:  Show Welcome Page`
 * Showing the welcome screen will also run the blockchain dependency checker.  
 * Install any of the required missing dependencies.  This is likely Truffle Suite and Ganache CLI:
@@ -95,9 +57,22 @@ docker image rm hacks/bc-dev-remote
 ![](../img/vscode4.png)
 
 
+## Connect vscode to Azure Blockchain Service
 
-Please return to [EnvironmentSetup](../EnvironmentSetup.md) and run all of the verification steps.  
 
+* In the vscode explorer pane, expand the `Blockchain Networks` option
+
+![](./img/vscodeexp.png)
+
+* Choose `Connect to Network`, and `Azure Blockchain` and connect to your consortium, following the prompts. It should look something like this:  
+
+![](./img/vscode5.png)
+
+**You did it, everything is working!**
+
+We can now move on and show how to create Smart Contracts on a blockchain.  
+
+You can return to [the homepage](./README.md) or continue to [Hack01:  Creating Smart Contracts](./labs/SmartContractIdeation/SmartContracts.md) where we will build a sample Hello World blockchain dapp.  
 
 
 
