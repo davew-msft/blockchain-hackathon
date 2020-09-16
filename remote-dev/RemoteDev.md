@@ -72,7 +72,7 @@ In the lower left corner you should see that you are now running vscode using th
 
 We can now move on and show how to create Smart Contracts on a blockchain.  
 
-You can return to [the homepage](./README.md) or continue to [Hack01:  Creating Smart Contracts](./labs/SmartContractIdeation/SmartContracts.md) where we will build a sample Hello World blockchain dapp.  
+You can return to [the homepage](./README.md) or continue to [Hack01:  Creating Smart Contracts](../labs/SmartContractIdeation/SmartContracts.md) where we will build a sample Hello World blockchain dapp.  
 
 
 

@@ -18,6 +18,9 @@ Whenever you create a new blockchain project:
 
 * Open vscode 
   * If using the remote container for development, ensure you are working from within that spawned vscode instance which denotes in the lower left that you are running against the container
+
+![](../../img/vscode8.png)
+
 * ctl + shft + P:  `Blockchain:  show welcome page` 
   * this will start all of the extensions and ensure all software is in a working state
 * ctl + shft + P:  `Terminal: Create New Integrated Terminal`
