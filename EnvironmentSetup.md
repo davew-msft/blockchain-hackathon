@@ -33,7 +33,11 @@ These 2 software packages require a working knowledge of javascript and nodejs. 
 
 ## Development with Docker dev ready containers
 
-We are going to use a pre-built dev-ready container with all tooling installed.  Please following these instructions to setup docker, vscode, and the container:  [vscode with ssh development](./remote-dev/RemoteDev.md)
+We are going to use a pre-built dev-ready container with all tooling installed.  Please following these instructions to setup docker, vscode, and the container:  
+
+[vscode with ssh development](./remote-dev/RemoteDev.md)
+
+### Alternative Software Setup Methods
 
 There are 2 alternative ways you could set up an Azure Blockchain Development Environment:  
 
@@ -45,9 +49,6 @@ There are 2 alternative ways you could set up an Azure Blockchain Development En
 
 *More information can be found [here](https://docs.microsoft.com/en-us/azure/blockchain/service/connect-vscode) regarding the software needed to build Smart Contracts.* 
 
-**Please choose a method to do remote development above and get your environment ready!**
-
-Once you have a development environment created, please go to the next step.  
 
 ## Devenv Verification Steps
 

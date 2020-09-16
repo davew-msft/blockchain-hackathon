@@ -8,6 +8,7 @@ Since
 
 You will need the following:  
 
+* git
 * vscode
   * add the following extensions
     * Remote-Containers
@@ -25,15 +26,18 @@ docker stop docker-test
 docker rm docker-test
 ```
 
-## Build the container from the Dockerfile
+## Get vscode ready
 
-These instructions assume you are running from bash/WSL.  You can also run them with powershell with some slight modifications
+1. create a folder on your machine for your project, or use an existing folder.  
 
 ```bash
 # first, clone this git repo to a directory where you normally do development
 git clone https://github.com/davew-msft/blockchain-hackathon.git  blockchain-hackathon
 cd blockchain-hackathon
-cd remote-dev
+```
+1. start vscode
+1. Press <kbd>F1</kbd> and select `Remote-Containers: Add Development Container Configuration Files`
+1. Select the `Azure Blockchain'
 
 # this will take awhile.  
 # you will see a lot of npm WARN messages in red.  They can all be ignored.  
