@@ -16,10 +16,15 @@ Make sure you have followed the steps in [EnvironmentSetup.md](EnvironmentSetup.
 
 Whenever you create a new blockchain project:  
 
-* create a folder that is NOT part of an existing git repo.  
+* Open vscode 
+  * If using the remote container for development, ensure you are working from within that spawned vscode instance which denotes in the lower left that you are running against the container
+* ctl + shft + P:  `Blockchain:  show welcome page` 
+  * this will start all of the extensions and ensure all software is in a working state
+* ctl + shft + P:  `Terminal: Create New Integrated Terminal`
   * `mkdir solidity-contract`
 * Ctl+Shft+P:  `Blockchain: New Solidity Contract`
 * `Create basic project`
+* when it asks for the folder choose the folder and path you created above (likely:  `solidity-contract`)
 * the project will take a few mins to create
 >> If you want to see what this is doing just `Ctl+~` (ctl + backtick(above TAB on most kbds)) and select `Output` and `Azure blockchain`. :
 
