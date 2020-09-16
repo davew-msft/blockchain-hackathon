@@ -36,8 +36,8 @@ git clone https://github.com/davew-msft/blockchain-hackathon.git  blockchain-hac
 cd blockchain-hackathon
 ```
 1. start vscode
-1. Press <kbd>F1</kbd> and select `Remote-Containers: Add Development Container Configuration Files`
-1. Select the `Azure Blockchain'
+1. Press <kbd>F1</kbd> and select `Remote-Containers: Reopen Folder in Container`
+
 
 # this will take awhile.  
 # you will see a lot of npm WARN messages in red.  They can all be ignored.  
