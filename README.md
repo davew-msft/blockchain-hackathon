@@ -38,6 +38,7 @@ We hope at the end of the day you'll learn the following:
   * If you want some practice before diving in and building a smart contract from scratch, consider the Optional Hacks.  
 * [Hack02: Build a Smart Contract using a Defined Use Case](./labs/SmartContractIdeation/02-SmartContractsDefinedUseCase.md)
   * In this hack we'll give you a defined use case so you can continue learning about the components of Smart Contracts.  
+  * We will use a "refrigerated transport IoT use case"
 * [Hack03: Solve Our Ideation Use Case with a Custom Smart Contract](./labs/SmartContractIdeation/03-SmartContractsIdeation.md)
   * Now we'll actually hack and try to solve our business use case.  
 * [Hack04: Add value to your Smart Contract using Flow](./labs/SmartContractIdeation/04-Flow.md)

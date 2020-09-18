@@ -39,16 +39,38 @@ Let's determine the remaining the requirements as we begin coding the solution
 ## Create a new Solidity Project
 
 * Create a New Solidity Project in vscode called `transport`.
+  * if using the docker container be sure to:
+```bash
+cd /workspaces
+mkdir transport
+```
+  * then <kbd>F1</kbd>, `Blockchain: New Solidity Project` and point it to `workspaces/transport`
 * this will create the standard HelloBlockchain.sol file
 * rename the file to `Transportation.sol`
-* rename the contract to `Transportation`
+* rename the contract to `Transportation` in the sol file `contract Transportation`
+
+>> At this point the deployment will fail because we haven't yet given the instructions on how to deploy our solidity contract.  Look at the two files in the `migrations` folder.  Notice that there is an initial migration (deployment) file and a "deploy contracts" file.  This file needs to be changed wince our contract changed.  Consider changing it, for now, to this:
+
+```javascript
+var Transportation = artifacts.require("Transportation");
+var Arg = "Hello world";
+module.exports = deployer => {
+    deployer.deploy(Transportation, Arg);
+};
+```
   * ensure you can build it, deploy it locally, and deploy to ABS
   * double check for any build errors
   * You can also verify that `build/contracts/Transportation.json` exists
 
+
+
+We haven't actually changed any code yet.  We just want to ensure the tooling is working and we can deploy a shell contract called Transportation.  You will again likely need to change the `pragma` on Line 1. 
+
 >>[Here is my finished sol file for reference](./Transportation.sol)
 
 ## Code the Contract
+
+>>[Here is my finished sol file for reference](./Transportation.sol) in case you get lost.  
 
 Using our HelloBlockchain code as a reference, let's make some changes to match our requirements.
 
@@ -83,6 +105,8 @@ Here's the list of properties I think we'll need, make the necessary changes to 
     int public  LastSensorUpdateTimestamp;
 ```
 
+>> `address` in this case is the ethereum blockchain address needed for counterparty hand-off
+
 Let's modify the `constructor` which is the basis for all new contracts.  This should cover the base use case:
 
 ```
@@ -111,7 +135,7 @@ We'll need at least 3 functions to accomplish an MVP for this smart contract:
 
 * a function to ingest the telemetry onto the blockchain
 * a function to transfer the responsibility of the item to the next counterparty on the chain
-* a function to say the contract is complete, the product arrived at its destination and the contract was in compliance
+* a function to say the contract is complete, the product arrived at its destination and the contract was in compliance the entire time
 
 Here are the functions that you can add to your smart contract:
 
@@ -220,13 +244,27 @@ Here are the functions that you can add to your smart contract:
 
 Place the above functions at the correct place in the sol file.  
 
+We still can't compile and deploy yet because we haven't told truffle how to deploy the contract.  Open `2_deploy_contracts.js`.  Remember, we modified this earlier.  We need to modify it again because we changed the signature of the constructor.  Consider changing it to something like this:
+
+```javascript
+var Transportation = artifacts.require("Transportation");
+// the address below are just something random for now
+var device = "0xfe548cC67E405211C7eC1D3824cE32304b03748A";
+var supplyChainOwner = "0xfe548cC67E405211C7eC1D3824cE32304b03748A";
+var supplyChainObserver = "0xfe548cC67E405211C7eC1D3824cE32304b03748A";
+var minHumidity = 0;
+var maxHumidity = 100;
+var minTemperature = 0;
+var maxTemperature  = 100;
+module.exports = deployer => {
+    deployer.deploy(Transportation, device,supplyChainOwner,supplyChainObserver,minHumidity,maxHumidity,minTemperature,maxTemperature);
+};
+
+
+```
+
 * Compile your contracts
 * Deploy your contracts locally
 * Deploy your contracts to ABS
-* You can now interact with your Smart Contract from vscode, Logic Apps, or Power Apps.  
+* You can now interact with your Smart Contract from vscode (unless you are using the container...sorry), Logic Apps, Power Apps, or the truffle CLI.  
 
-Application Files
------------------
-[RefrigeratedTransportation.json](./ethereum/RefrigeratedTransportation.json)
-
-[RefrigeratedTransportation.sol](./ethereum/RefrigeratedTransportation.sol)
