@@ -12,6 +12,7 @@ Perform the following steps in a new, empty folder.  This is written for bash/ub
 
 ```bash
 mkdir -p bc-hello-world
+cd bc-hello-world
 
 npm init
 

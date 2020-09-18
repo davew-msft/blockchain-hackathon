@@ -30,12 +30,13 @@ We hope at the end of the day you'll learn the following:
 * [Presentation:  "What is Azure Blockchain"](./02-azure-blockchain.pptx)
 * [Presentation:  "Solidity Smart Contracts"](./03-SolidityContracts.pptx)
 * [Ideation Workshop](./04-Blockchain-Ideation.pptx)
+  * We will do a Design Thinking exercise together as a groupd
+* [Building a Smart Contract Rapid Prototype](./05-Build-Prototype.pptx)
 * [Setup Your Hacking Environment](EnvironmentSetup.md)
   * Hopefully the setup is done by now, if not you need to complete the devenv setup before continuing.
 * [Hack01:  Creating Smart Contracts](./labs/SmartContractIdeation/SmartContracts.md)
   * In this hack we will build a smart contract solution using Azure Blockchain and supporting services  
   * If you get stuck or need assistance, let us know.  
-  * If you want some practice before diving in and building a smart contract from scratch, consider the Optional Hacks.  
 * [Hack02: Build a Smart Contract using a Defined Use Case](./labs/SmartContractIdeation/02-SmartContractsDefinedUseCase.md)
   * In this hack we'll give you a defined use case so you can continue learning about the components of Smart Contracts.  
   * We will use a "refrigerated transport IoT use case"
@@ -46,18 +47,7 @@ We hope at the end of the day you'll learn the following:
   * We could do something similarly with an Azure Logic App.  
 
 ## Optional Hacks
-These are optional hacks you can do to get a deeper understanding of some of the core concepts we discussed today. If you are getting overwhelmed designing your Smart Contract from scratch, try some of these challenges first.  
-
-* [Optional Hack 01: Send Transactions to the Bitcoin Network](bitcoin-test.md)
-  * This "challenge" is optional.  We learn how to send transactions to the bitcoin network.
-  * The bitcoin network is very different from Ethereum or other blockchains, specifically in how UTXOs are handled.  The lab is meant to help you understand the differences in implementation.  
-* [Optional Hack 02: Building a Private Blockchain with Docker and Ethereum](PrivateBlockchain.md)
-  * Building a private blockchain from scratch is a great way for a developer to understand more deeply the inner workings of some of these core concepts.  
-  * This hack is geared to attendees that do not have access to Azure Blockchain.  
-* [Optional Hack 03: Hyperledger Smart Contract Serverless Development using Hyperledger Composer](03-hyperledger-composer.md)
-  * Build a smart auction using Hyperledger Composer in a web brower.  
-  * This is a great way to understand, declaratively, how to build a smart contract with the associated transactions and parties, without getting mired in implementation details.  
-* [Optional Hack 04: Interact with the Ropsten Ethereum Test Network by building a Smart Contract](04-ethereum-test.md)
+These are optional hacks you can do to get a deeper understanding of some of the core concepts we discussed today. If you are getting overwhelmed designing your Smart Contract from scratch, try some of these challenges first.  (see history)
 
 ## Resources
 

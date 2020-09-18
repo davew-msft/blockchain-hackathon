@@ -7,7 +7,7 @@ During our Ideation Session you should have a basic use case that we can try to 
 ## General Pointers
 
 * Save and `git commit` your work often.  Simple things like compile errors due to missing braces is not always easy to debug.  With git you can always rollback to a known good state.  
-* Try looking at [OpenZeppelin Smart Contracts](https://openzeppelin.com/contracts/) for inspiration and help.  It's best, IMO, to start contract coding by looking at what is available in the open source marketplace.  OpenZeppelin provides contracts that have been tested and audited.  
+* Try looking at [OpenZeppelin Smart Contracts](https://openzeppelin.com/contracts/) for inspiration and help.  It's best, IMO, to start contract coding by looking at what is available in the open source marketplace.  OpenZeppelin provides contracts that have been tested and audited.  [Here is a list](https://docs.openzeppelin.com/contracts/3.x/)  
 * If you haven't already done so, consider looking at our previous lab, [Hack02: Build a Smart Contract using a Defined Use Case](./labs/SmartContractIdeation/02-SmartContractsDefinedUseCase.md), which builds a smart contract using a contrived use case.  This should show you the patterns to get started.  
 
 ## Getting Started

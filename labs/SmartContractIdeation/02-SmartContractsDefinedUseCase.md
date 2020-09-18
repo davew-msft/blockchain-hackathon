@@ -266,5 +266,5 @@ module.exports = deployer => {
 * Compile your contracts
 * Deploy your contracts locally
 * Deploy your contracts to ABS
-* You can now interact with your Smart Contract from vscode (unless you are using the container...sorry), Logic Apps, Power Apps, or the truffle CLI.  
+* You can now interact with your Smart Contract from vscode, Logic Apps, Power Apps, or the truffle CLI.  
 
