@@ -2,11 +2,15 @@
 
 ## Background
 
-For this hack we are going to build a `Hello World` -style application so you understand the basic workflow to build a _very_ simplistic smart contract dapp.  
+For this hack we are going to build a `Hello World` -style application so you understand the basic workflow to build a _very_ simplistic smart contract dapp.  All we are going to do is:
+* send a message to a receiver
+* the receiver will ack it and send a response back
 
-We use the Truffle Suite under-the-covers in vscode to develop smart contracts in Ethereum with Azure. 
+That completes the smart contract.  
 
-Remember: Before choosing the implementation language, one has to design the flow and develop conditions. You should have a basic understanding of this from our ideation session.  
+We use the Truffle Suite under-the-covers in vscode to develop smart contracts in Ethereum, deploying to Azure. 
+
+>>With blockchain, iterative development is your friend.  Don't try to do too much before you test your smart contract.  After every successful test, consider committing your changes to git.  
 
 ## Getting Started
 
@@ -21,11 +25,14 @@ Whenever you create a new blockchain project:
 
 ![](../../img/vscode8.png)
 
-* ctl + shft + P:  `Blockchain:  show welcome page` 
+* <kbd>F1</kbd>:  `Blockchain:  show welcome page` 
   * this will start all of the extensions and ensure all software is in a working state
-* ctl + shft + P:  `Terminal: Create New Integrated Terminal`
+* <kbd>F1</kbd>:  `Terminal: Create New Integrated Terminal`
   * `mkdir solidity-contract`
-* Ctl+Shft+P:  `Blockchain: New Solidity Contract`
+
+>> When doing blockchain development you can choose to have all of your smart contracts under one project, or each in their own project  
+
+* <kbd>F1</kbd>:  `Blockchain: New Solidity Contract`
 * `Create basic project`
 * when it asks for the folder choose the folder and path you created above (likely:  `/workspaces/blockchain-hackathon/solidity-contract/`)
 * the project will take a few mins to create
@@ -33,13 +40,18 @@ Whenever you create a new blockchain project:
 
 ![](../../img/vscode6.png)
 
-  
+    
 
 * when completed you should see something like this in your explorer pane:  
 
 ![](../../img/sc.png)
 
 This is our smart contract code template with all of the supporting files.  Take a minute to familiarize yourself with the contents of the folder.  
+
+* all contracts you create will be in the `contracts` folder.  
+* It's always best to make a copy of the `HelloBlockchain.sol` and start new development using that as a template.  
+* `migrations` contains the instructions to deploy a smart contract.  
+* `truffle-config.js` will have the configurations for your ethereum networks.  This will minimally contain your local development network and might contain your Azure settings.  
 
 Find your Solidity template contract.  It's likely called `HelloBlockchain.sol`.  Open that file in your editor. 
 
@@ -52,13 +64,20 @@ Take a few minutes to get familiar with what this solidity contract does.
 
 We want to test that minimally our devenv is working and we can do local development.  
 
-* Right click the sol file and choose `Build contracts`.  Make sure there are no problems (errors) in the output.  
+* You'll immediately likely see that the file is red and there is a problem in the `PROBLEMS` section of the output pane.  
+  * It will likely say something about `compiler version is 0.7.0` but our sol file is using:   
+  `pragma solidity ^0.5.0;` 
+  let's change that to:  
+  `pragma solidity >0.5.0;` :  Note:  we changed the carat to a `>`.  This is telling solidity to use a minimum of compile v5 vs strictly v5.  
+* Right click the sol file and choose `Build contracts`.  Make sure there are no problems (errors) in the output. 
+>> Note that the build created a `build/contracts` folder with a json file.  This is what will actually be deployed.   
 * Right click the sol file and choose Deploy.  There should be an entry for `development`
 * If you want to see what this is doing just `Ctl+~` (ctl + backtick(above TAB on most kbds)) and select `Output` and `Azure blockchain`.  You should see the commands and the success message.  
   * Take a minute to get familiar with what a deploy is doing by reading the output messages.  
+
 * At this point we can send test transactions to our local truffle network.  Right click the sol file again and `Show Smart Contract Interaction Page.`
 
->> As of the writing of this workshop the Smart Contract Interaction Page only works on Windows (not the Ubuntu container).  That's ok, we will deploy it to Azure next to test it.  
+>> As of the writing of this workshop the Smart Contract Interaction Page only works on Windows (not the Ubuntu container though).  That's ok, we will deploy it to Azure next to test it.  Sorry.  
 
 ## Deploy the Smart Contract to ABS
 
@@ -94,7 +113,7 @@ Let's test the contract using the GUI.
 
 ![](../../img/vscode7.png)
 
-Take a minute a familiarize yourself with what is going on.  **Make sure you scroll to see the metadata at the bottom. If it crashes don't worry, we have other ways to test our smart contracts.** 
+Take a minute a familiarize yourself with what is going on.  **Make sure you scroll to see the metadata at the bottom. If it crashes don't worry, we have other ways to test our smart contracts.  There are some known issues with the Smart Contract UI unfortunately.** 
 
 ### What is vscode doing?
 
@@ -102,8 +121,11 @@ vscode is just a wrapper around truffle and ganache calls.  You can run these ca
 
 ```
 
+# deploy (called "migrate" in blockchain-speak) a contract to a network
 npx truffle migrate --reset -network <your network name>
 
+# this allows you to integrate with the blockchain network in real-time.  
+# type .exit to exit the console
 truffle console --network <your network name>
 
 ```
@@ -120,6 +142,8 @@ Let's add 2 add'l functions to our solidity file:
         return ResponseMessage;
     }
 ```
+
+We are adding 2 functions that we can call against our contract to see information about the contract, namely the messages sent to/from the actors.  
 
 **Paste those lines BEFORE the closing } of the `contract`**
 
@@ -144,7 +168,7 @@ Now try the following:
 ```
 HelloBlockchain.deployed().then(i => {i.SendRequest("my request")})
 
-# you'll likely see "undefined" as the response since we aren't ACK'ing the message.  We can fix that later.  
+# you'll likely see "undefined" as the response since we aren't ACK'ing the message in the original HelloBlockchain.sol file.  The original truffle developers should've done this in the solidity contract.  We can fix that later.  
 
 HelloBlockchain.deployed().then(i => { return i.RequestMessage.call(); })
 # this should return whatever you LAST sent
@@ -153,7 +177,7 @@ HelloBlockchain.deployed().then(i => { return i.RequestMessage.call(); })
 
 Run `.exit` to exit the truffle console.  
 
-Run `git add .` and `git commit -am"init commit"` to save our Hello World example.  We can use this as a base for the next hacks.  
+Run `git add .` and `git commit -am"init commit"` to save our Hello World example.  `git init` is run automatically for us whenever we create a new solidity project.  We can use this as a base for the next hacks.  
 
 **Congratulations! You have successfully interacted with a blockchain using the standard ethereum tooling**
 

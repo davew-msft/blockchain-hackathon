@@ -42,19 +42,11 @@ In the lower left corner you should see that you are now running vscode using th
 
 ![](../img/vscode8.png)
 
-* Ctl + Shift+ P :  `Blockchain:  Show Welcome Page`
-* Showing the welcome screen will also run the blockchain dependency checker.  
-* Install any of the required missing dependencies.  This is likely Truffle Suite and Ganache CLI:
+* <kbd>F1</kbd> :  `Blockchain:  Show Welcome Page`
+>> Showing the welcome screen will also run the blockchain dependency checker.  It's good to re-run this whenever you restart the container, just in case you installed something that accidentally broke blockchain tooling, if it asks you to:  
+
 
 ![](../img/vscode3.png)
-
-* Close this vscode child window
-* Relaunch vscode in the container by again: `Remote-Containers: Attach to Running Container`
-
-* You should not see any errors are missing dependencies.  You should just see the standard welcome screen:
-
-
-![](../img/vscode4.png)
 
 
 ## Connect vscode to Azure Blockchain Service
@@ -62,11 +54,11 @@ In the lower left corner you should see that you are now running vscode using th
 
 * In the vscode explorer pane, expand the `Blockchain Networks` option
 
-![](./img/vscodeexp.png)
+![](../img/vscodeexp.png)
 
 * Choose `Connect to Network`, and `Azure Blockchain` and connect to your consortium, following the prompts. It should look something like this:  
 
-![](./img/vscode5.png)
+![](../img/vscode5.png)
 
 **You did it, everything is working!**
 
