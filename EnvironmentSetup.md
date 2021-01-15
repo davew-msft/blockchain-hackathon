@@ -25,30 +25,18 @@ You will need an Azure Subscription with at least OWNER on one resource group
 
 ## Local Development Environment
 
-Developing smart contracts for a blockchain can be done many different ways.  As of this blockchain hackathon's writing, the tooling generally includes
+Developing smart contracts for a blockchain can be done many different ways.  As of this blockchain hackathon's writing, the tooling most developers use includes
 * truffle:  this allows you to build the actual smart contract code
 * ganache:  a CLI that allows you to deploy the json output from the `truffle` commands to either a local blockchain that gananche runs for you, or a private (example:  Azure Blockchain) or public (example:  Ethereum) blockchain. 
+* solidity:  this is the high-level language truffle uses to compile the json that is known as the `smart contract`.  We'll go over these terms in detail today.  
 
-These 2 software packages require a working knowledge of javascript and nodejs.  Blockchain is built on security and one of the core nodejs security packages actually requires python 2.7 to work properly.  Python 2.7 is out-of-support and does not play nicely with python3x on your laptop.  In fact, if you are a python programmer you may not want to risk polluting your work machine with python 2.7.  
-
-## Development with Docker dev ready containers
+These software packages require a working knowledge of javascript and nodejs.  Blockchain is built on security and one of the core nodejs security packages actually requires python 2.7 to work properly.  Python 2.7 is out-of-support and does not play nicely with python3 on your laptop.  In fact, if you are a python programmer you may not want to risk polluting your work machine with python 2.7.  **So, the prefered method for development is to use a "dev ready container" -- a docker container that has all of the tools already installed and configured.**  We "connect" to this container using vscode, which becomes the "head" for development against the container.  Doing it this way ensures the development experience and tooling is installed _identically_ regardless of whether you use windows, mac, or a chromebook.  
 
 We are going to use a pre-built dev-ready container with all tooling installed.  Please following these instructions to setup docker, vscode, and the container:  
 
 [vscode remote container development](./remote-dev/RemoteDev.md)
 
-### Alternative Software Setup Methods
-
-There are 2 alternative ways you could set up an Azure Blockchain Development Environment:  
-
-|Method|Description|Pros|Cons|
-|---------|------|------|------|
-|[Local Software Install](./LocalInstall.md)|Install everything locally on your laptop.|For full time developers that are comfortable with python 2.7|**Warning: this may be challenging if you are not well-versed in python and nodejs.**|
-|[development on a docker "vm" on your laptop](./docker-dev-env/README.md)|Everything, including vscode, runs in the container and we will using mstsc/rdp to connect to the environment. |||
-
-
-*More information can be found [here](https://docs.microsoft.com/en-us/azure/blockchain/service/connect-vscode) regarding the software needed to build Smart Contracts.* 
-
+If you want to understand how to install all of the tooling manually, please see the `git history` for this file.  
 
 ## Devenv Verification Steps
 
@@ -66,21 +54,3 @@ ganache-cli version #ctl+c to kill it
 * Ctl+Shift+P then `Blockchain: Show Welcome Page`
   * It may take a few seconds to display, it is checking your software dependencies.  
   * **At this point you may see errors about required software missing.  We need to resolve those issues NOW**.  If you just see the Welcome screen then you are ready to go.  
-
-  
-## Connect vscode to Azure Blockchain Service
-
-
-* In the vscode explorer pane, expand the `Blockchain Networks` option
-
-![](./img/vscodeexp.png)
-
-* Choose `Connect to Network`, and `Azure Blockchain` and connect to your consortium, following the prompts. It should look something like this:  
-
-![](./img/vscode5.png)
-
-**You did it, everything is working!**
-
-We can now move on and show how to create Smart Contracts on a blockchain.  
-
-You can return to [the homepage](./README.md) or continue to [Hack01:  Creating Smart Contracts](./labs/SmartContractIdeation/SmartContracts.md) where we will build a sample Hello World blockchain dapp.  

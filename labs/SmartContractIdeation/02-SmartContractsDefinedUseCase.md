@@ -139,7 +139,7 @@ We'll need at least 3 functions to accomplish an MVP for this smart contract:
 
 Here are the functions that you can add to your smart contract:
 
-```
+```javascript
     function IngestTelemetry(int humidity, int temperature, int timestamp) public
     {
         // Separately check for states and sender 

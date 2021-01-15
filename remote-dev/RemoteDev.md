@@ -16,7 +16,8 @@ You will need the following:
 * Docker Desktop
   * the exact instructions to install docker desktop on your laptop varies depending on whether you use mac, linux, or windows (and depending on the version of windows too).  
   * we can help if needed
-  * to test your docker deployment run the following container
+  * If you use a recent build of Windows 10, consider using WSL2 with Docker Desktop.  
+  * once you have everything ready you can test your docker deployment run the following container
   * `docker run --name docker-test -d -p 8081:80 docker/getting-started`
   * and then connect to:  `http:/localhost:8081`
   * when everything is working you can run the following to stop this container

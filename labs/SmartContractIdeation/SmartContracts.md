@@ -165,13 +165,23 @@ You should see a truffle prompt.
 
 Now try the following:
 
-```
+```javascript
 HelloBlockchain.deployed().then(i => {i.SendRequest("my request")})
 
-# you'll likely see "undefined" as the response since we aren't ACK'ing the message in the original HelloBlockchain.sol file.  The original truffle developers should've done this in the solidity contract.  We can fix that later.  
+// you'll likely see "undefined" as the response since we aren't ACK'ing the message in the original HelloBlockchain.sol file.  The original truffle developers should've done this in the solidity contract.  We can fix that later.  
 
 HelloBlockchain.deployed().then(i => { return i.RequestMessage.call(); })
-# this should return whatever you LAST sent
+// this should return whatever you LAST sent
+
+// let's use our new function
+HelloBlockchain.deployed().then(i => { return i.getRequestMessage.call(); })
+
+// now let's send a response
+HelloBlockchain.deployed().then(i => {i.SendResponse("my response")})
+// note the `undefined` as the output
+
+// now let's look at the response using one of our new functions
+HelloBlockchain.deployed().then(i => { return i.getResponseMessage.call(); })
 
 ```
 

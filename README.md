@@ -22,7 +22,7 @@ We hope at the end of the day you'll learn the following:
 
 ## **Getting Your Environment Setup**
 
-**Please follow the instructions on [EnvironmentSetup.md](EnvironmentSetup.md).  You may want to start doing this immediately and multitask while we do the presentations and ideation.  Installing software can take valuable time away from hacking.**
+**Please follow the instructions on [Hack00: EnvironmentSetup.md](EnvironmentSetup.md).  You may want to start doing this immediately and multitask while we do the presentations and ideation.  Installing software can take valuable time away from hacking.**
 
 ## Agenda
 
@@ -32,7 +32,7 @@ We hope at the end of the day you'll learn the following:
 * [Ideation Workshop](./04-Blockchain-Ideation.pptx)
   * We will do a Design Thinking exercise together as a groupd
 * [Building a Smart Contract Rapid Prototype](./05-Build-Prototype.pptx)
-* [Setup Your Hacking Environment](EnvironmentSetup.md)
+* [Hack00:  Setup Your Hacking Environment](EnvironmentSetup.md)
   * Hopefully the setup is done by now, if not you need to complete the devenv setup before continuing.
 * [Hack01:  Creating Smart Contracts](./labs/SmartContractIdeation/SmartContracts.md)
   * In this hack we will build a smart contract solution using Azure Blockchain and supporting services  
